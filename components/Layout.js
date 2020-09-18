@@ -14,20 +14,24 @@ const useToggleOpen = () => {
   }
   return [isOpen, toggle];
 };
-export default props => {
+export default (props) => {
   const { children } = props;
-
-  const [isOpen, toggleNavbar] = useToggleOpen(false);
 
   return (
     <div>
       <Head>
-        <title>FoodAdvisor + Next.js = 💖</title>
+        <title>
+          FoodAdvisor + Next.js ={" "}
+          <span role="img" aria-label="love emoji">
+            💖
+          </span>
+        </title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <nav>
-        <Link href="/">
+        <Link href="/about">
+          {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
           <a className="logo">FoodAdvisor</a>
         </Link>
       </nav>
